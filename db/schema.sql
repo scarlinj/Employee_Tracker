@@ -15,16 +15,24 @@
 
 -- insert the code from db.sql into this schema.sql file - did not work with the below three commands in db.sql
 
-DROP DATABASE IF EXISTS employeetrackerDB;
-CREATE DATABASE employeetrackerDB;
-USE employeetrackerDB;
+DROP DATABASE IF EXISTS company_db;
+CREATE DATABASE company_db;
+USE company_db;
 
-CREATE TABLE department(
-    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+-- Use "source db/db.sql" from the root folder to recreate this table
+
+CREATE TABLE department (
+    department_id INT AUTO_INCREMENT PRIMARY KEY;
     department_name VARCHAR(30)
 );
 
--- semicolon terminates the statement and creates departments table
+CREATE TABLE role (
+    role_id INT AUTO_INCREMENT PRIMARY KEY, 
+    title VARCHAR(50),
+    salary DECIMAL(10,2),
+    department_id INTEGER,
+    CONSTRAINT department_fk FOREIGN KEY (department_id) REFERENCES department(department_id) ON DELETE CASCADE
+);
 
 CREATE TABLE employee (
     employee_id INT AUTO_INCREMENT PRIMARY KEY, 
@@ -35,12 +43,3 @@ CREATE TABLE employee (
     CONSTRAINT role_fk FOREIGN KEY (role_id) REFERENCES role(role_id) ON DELETE CASCADE,
     CONSTRAINT manager_fk FOREIGN KEY (manager_id) REFERENCES employee(employee_id) ON DELETE SET NULL
 );
-
-CREATE TABLE role (
-    id INTEGER PRIMARY KEY,
-    title VARCHAR(30),
-    salary DECIMAL,
-    department_id INT,
-    CONSTRAINT department_fk FOREIGN KEY (department_id) REFERENCES department(department_id) ON DELETE CASCADE
-);
-
