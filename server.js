@@ -59,7 +59,7 @@ startAdding = () => {
           "View all departments",
           "View all roles",
           "View all employees",
-          "View all employees by Manger",
+          "View all employees by Manager",
           "Add a department",
           "Add a role",
           "Add an employee",
@@ -171,7 +171,7 @@ viewEmployeesByManger = () => {
           {
             name: "manager",
             type: "rawlist",
-            message: "Which manager would you like to see the employee's of?",
+            message: "Choose a manager to see the list of their employees.",
             choices: managers,
           },
         ])
@@ -237,7 +237,7 @@ addARole = () => {
         {
           name: "deptName",
           type: "rawlist",
-          message: "Which department would you like to add the new role to?",
+          message: "To which department would you like to add the new role?",
           choices: departments,
         },
       ])
@@ -340,13 +340,13 @@ updateAnEmployeeRole = () => {
           {
             name: "employee",
             type: "rawlist",
-            message: "Which team member is getting an updated role?",
+            message: "Which team member has a Role update?",
             choices: employees,
           },
           {
             name: "newRole",
             type: "rawlist",
-            message: "What is the lucky team member's new role?",
+            message: "What is the team member's new role?",
             choices: roles,
           },
         ])
@@ -386,7 +386,7 @@ updateAnEmployeeManager = () => {
         {
           name: "employee",
           type: "rawlist",
-          message: "Which team member is getting a Manager update?",
+          message: "Which team member has a Manager update?",
           choices: employees,
         },
         {
