@@ -1,7 +1,7 @@
 Installation
 - In the command line, type the following to install the relevant tools:
+    -- npm i node
     -- npm start
-    -- 
 
 To Run this file from the MySQL command line, type:
 - source db/db.sql
