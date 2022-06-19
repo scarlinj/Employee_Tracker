@@ -23,7 +23,8 @@ VALUES('Account Executive', 110000, 1),
 
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES('Benjamin', 'Lewis', 12, NULL),
+VALUES
+('Benjamin', 'Lewis', 12, NULL),
 ('Jessica', 'Cobb', 13, 1),
 ('Wendy', 'Martin', 14, 1),
 ('Biggie', 'Smallson', 3, 2),
