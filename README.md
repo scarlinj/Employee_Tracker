@@ -8,7 +8,6 @@
 >   - [Features](#features)
 >   - [Intallation](#installation)
 >   - [Usage](#usage)
->   - [User Story](#user-story)
 >   - [Technology](#technology)
 >   - [Credits](#credits)
 >   - [How to Contribute](#How--to--Contribute)
@@ -16,11 +15,11 @@
 
 ## About / Synopsis
 
-Welcome to the Employee Tracker!  Use this command-prompt tool to manage a database for your employees.  You can add, remove, edit or change employees, departments, etc. using the command prompts.
+Welcome to the Employee Tracker!  Use this command-prompt tool to manage a database for your employees.  You can add, remove, edit or change employees, departments, etc. using the command prompts in the terminal.
 
 ## Features
 
-Your answers to the various command prompts will auto-populate data in the company database.
+Your answers to the various command prompts will auto-populate data in the company database.  You can look up the data input, edit the data input, or delete the data input into the database.
 
 ## Installation
 
@@ -37,6 +36,11 @@ You can load default data to view an example of the use of these databases using
 - source db/seeds.sql
 
 ## Usage
+
+You can view a video walkthrough demonstration at:
+
+https://drive.google.com/file/d/1jYGeq7VoyeBPDjWYkW8IoalrA_EeDB1t/view
+
 Use this command-prompt tool to manage a database for your employees.  You can accomplish all of the below through this tool.  Start the prompts by typing "npm start" in the commmand line.
 
 - View All Departments
@@ -51,31 +55,17 @@ Use this command-prompt tool to manage a database for your employees.  You can a
 
 
 
-
-Description of this App:
-AS A business owner
-I WANT to be able to view and manage the departments, roles, and employees in my company
-SO THAT I can organize and plan my business
-
-GIVEN a command-line application that accepts user input
-WHEN I start the application
-THEN I am presented with the following options: view all departments, view all roles, view all employees, add a department, add a role, add an employee, and update an employee role
-WHEN I choose to view all departments
-THEN I am presented with a formatted table showing department names and department ids
-WHEN I choose to view all roles
-THEN I am presented with the job title, role id, the department that role belongs to, and the salary for that role
-WHEN I choose to view all employees
-THEN I am presented with a formatted table showing employee data, including employee ids, first names, last names, job titles, departments, salaries, and managers that the employees report to
-WHEN I choose to add a department
-THEN I am prompted to enter the name of the department and that department is added to the database
-WHEN I choose to add a role
-THEN I am prompted to enter the name, salary, and department for the role and that role is added to the database
-WHEN I choose to add an employee
-THEN I am prompted to enter the employee’s first name, last name, role, and manager, and that employee is added to the database
-WHEN I choose to update an employee role
-THEN I am prompted to select an employee to update and their new role and this information is updated in the database
-
 ## Technology
+
+This application was created with the following technologies:
+- MySQL2
+- Node.js
+- Inquirer.js
+- dotenv
+
+## Credits
+
+I worked on this program with assistance from fellow Github users hestokes, 786-go, and Jeongholee21.
 
 ## Questions
 
