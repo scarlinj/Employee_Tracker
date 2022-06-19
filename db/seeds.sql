@@ -1,22 +1,9 @@
-INSERT INTO department (id, department_name)
+INSERT INTO department (department_id, department_name)
 VALUES (1, 'Sales'),
 (2, 'Human Resources'),
 (3, 'Project Management'),
 (4, 'Information Technology'),
 (5, 'Executive');
-
--- INSERT INTO department (id, department_name);
-
--- example from Module 12 below
--- VALUES'  ('Virginia', 'Woolf', 1),
---   ('Piers', 'Gaveston', 0),
---   ('Charles', 'LeRoi', 1),
---   ('Katherine', 'Mansfield', 1),
---   ('Dora', 'Carrington', 0),
---   ('Edward', 'Bellamy', 0),
---   ('Montague', 'Summers', 1),
---   ('Octavia', 'Butler', 1),
---   ('Unica', 'Zurn', 1);
 
 INSERT INTO role (title, salary, department_id)
 VALUES('Account Executive', 110000, 1),
@@ -36,16 +23,15 @@ VALUES('Account Executive', 110000, 1),
 
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES
-('Benjamin', 'Lewis', 50000, 12, NULL),
-('Jessica', 'Cobb', 60000, 13, 1),
-('Wendy', 'Martin', 50000, 14, 1),
-('Biggie', 'Smallson', 40000, 3, 2),
-('Johnny', 'Copp', 50000, 9, 2),
-('Royal', 'Robbins', 80000, 11, 2),
-('Anna', 'Robins', 100000, 6, 2),
-('Lefty', 'Kreh', 50000, 1, 4),
-('Flipp', 'Pallot', 60000, 1, 4),
-('Jumanji', 'Jones', 70000, 2, 4),
-('Andy', 'Hughes', 40000, 4, 7),
-('Lindsay', 'Hagwood', 70000, 5, 7)
+VALUES('Benjamin', 'Lewis', 12, NULL),
+('Jessica', 'Cobb', 13, 1),
+('Wendy', 'Martin', 14, 1),
+('Biggie', 'Smallson', 3, 2),
+('Johnny', 'Copp', 9, 2),
+('Royal', 'Robbins', 11, 2),
+('Anna', 'Robins', 6, 2),
+('Lefty', 'Kreh', 1, 4),
+('Flipp', 'Pallot', 1, 4),
+('Jumanji', 'Jones', 2, 4),
+('Andy', 'Hughes', 4, 7),
+('Lindsay', 'Hagwood', 5, 7);

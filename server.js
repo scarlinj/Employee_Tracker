@@ -1,3 +1,4 @@
+const express = require('express');
 const inquirer = require('inquirer');
 // Import and require mysql2
 const mysql = require('mysql2');
@@ -26,6 +27,12 @@ console.log('Connected to department_db'));
 // console.log('Connected to department_db')
 // );
 
+const PORT = process.env.PORT || 3001;
+const app = express();
+
+// Express middleware
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 const connection = mysql.createConnection({
   host: "localhost",
@@ -47,7 +54,7 @@ startAdding = () => {
       {
         name: "optionMenu",
         type: "rawlist",
-        message: "Welcome! What is your plan today?",
+        message: "Welcome! How would you like to proceed?",
         choices: [
           "View all departments",
           "View all roles",
@@ -560,3 +567,13 @@ viewDepartmentSalary = () => {
     }
   );
 };
+
+app.get('/', (req, res) => {
+    res.json({
+      message: 'Hello World'
+    });
+  });
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
